@@ -1,0 +1,8 @@
+export { default as AngularIcon } from './AngularIcon.vue'
+export { default as DjangoIcon } from './DjangoIcon.vue'
+export { default as GitIcon } from './GitIcon.vue'
+export { default as PythonIcon } from './PythonIcon.vue'
+export { default as SupabaseIcon } from './SupabaseIcon.vue'
+export { default as TailwindIcon } from './TailwindIcon.vue'
+export { default as TypeScriptIcon } from './TypeScriptIcon.vue'
+export { default as VueIcon } from './VueIcon.vue'
