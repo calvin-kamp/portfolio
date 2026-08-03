@@ -1,0 +1,5 @@
+export { default as HeroSection } from './HeroSection.vue'
+export { default as AboutSection } from './AboutSection.vue'
+export { default as TechStackSection } from './TechStackSection.vue'
+export { default as ProjectSection } from './ProjectSection.vue'
+export { default as ContactSection } from './ContactSection.vue'
