@@ -1,0 +1,68 @@
+<script setup lang="ts">
+import { Field } from 'vee-validate'
+
+interface Props {
+  fieldName: string
+  id: string
+  label: string
+  required?: boolean
+  description?: string
+}
+
+const props = defineProps<Props>()
+</script>
+
+<template>
+  <div>
+    <Field
+      v-slot="{ field, errors }"
+      :name="props.fieldName"
+    >
+      <label :for="props.id">
+        {{ props.label }}
+
+        <span
+          v-if="props.required"
+          aria-hidden="true"
+        >
+          *
+        </span>
+      </label>
+
+      <textarea
+        v-bind="field"
+        :id="props.id"
+        :required="props.required"
+        :aria-invalid="!!errors.length"
+        :aria-describedby="
+          [
+            props.description ? `${props.id}-description` : null,
+            errors.length ? `${props.id}-errors` : null,
+          ]
+            .filter(Boolean)
+            .join(' ') || undefined
+        "
+      ></textarea>
+
+      <span
+        v-if="props.description"
+        :id="`${props.id}-description`"
+      >
+        {{ props.description }}
+      </span>
+
+      <ul
+        v-if="errors.length"
+        :id="`${props.id}-errors`"
+        role="alert"
+      >
+        <li
+          v-for="error in errors"
+          :key="error"
+        >
+          {{ error }}
+        </li>
+      </ul>
+    </Field>
+  </div>
+</template>
