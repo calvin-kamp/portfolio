@@ -1,0 +1,6 @@
+export { navItems } from './navigation.data'
+export { heroMeta } from './hero.data'
+export { aboutFacts } from './about.data'
+export { techCategories } from './tech-stack.data'
+export { projects, featuredProject, secondaryProjects } from './projects.data'
+export { emailAddress, socialLinks, contactTopics } from './contact.data'

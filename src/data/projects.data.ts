@@ -1,0 +1,67 @@
+import type { Project } from '@/types/project.types'
+
+export const projects: Project[] = [
+  {
+    id: 'nibbel',
+    name: 'Nibbel',
+    repoUrl: 'https://github.com/calvin-kamp-dev/nibbel',
+    liveUrl: 'https://github.com/calvin-kamp',
+    featured: true,
+    tags: ['Vue 3', 'Pinia', 'Tailwind', 'Django REST', 'PostgreSQL'],
+    coverRows: [{ width: 72 }, { width: 46, accent: true }, { width: 88 }, { width: 60 }],
+    coverLabelKey: 'sections.work.projects.nibbel.coverLabel',
+    metaKey: 'sections.work.projects.nibbel.meta',
+    descriptionKey: 'sections.work.projects.nibbel.description',
+  },
+  {
+    id: 'kanmind',
+    name: 'KanMind',
+    repoUrl: 'https://github.com/calvin-kamp-dev/kanmind',
+    liveUrl: 'https://github.com/calvin-kamp',
+    featured: false,
+    tags: ['Angular', 'Signals', 'Django REST'],
+    coverRows: [{ width: 55 }, { width: 34, accent: true }, { width: 78 }],
+    coverLabelKey: 'sections.work.projects.kanmind.coverLabel',
+    metaKey: 'sections.work.projects.kanmind.meta',
+    descriptionKey: 'sections.work.projects.kanmind.description',
+  },
+  {
+    id: 'join',
+    name: 'Join',
+    repoUrl: 'https://github.com/calvin-kamp-dev/join',
+    liveUrl: 'https://github.com/calvin-kamp',
+    featured: false,
+    tags: ['JavaScript', 'Firebase', 'CSS'],
+    coverRows: [{ width: 66 }, { width: 40 }, { width: 82, accent: true }],
+    coverLabelKey: 'sections.work.projects.join.coverLabel',
+    metaKey: 'sections.work.projects.join.meta',
+    descriptionKey: 'sections.work.projects.join.description',
+  },
+  {
+    id: 'pokedex',
+    name: 'Pokédex',
+    repoUrl: 'https://github.com/calvin-kamp-dev/pokedex',
+    liveUrl: 'https://github.com/calvin-kamp',
+    featured: false,
+    tags: ['TypeScript', 'PokéAPI', 'CSS'],
+    coverRows: [{ width: 48, accent: true }, { width: 71 }, { width: 36 }],
+    coverLabelKey: 'sections.work.projects.pokedex.coverLabel',
+    metaKey: 'sections.work.projects.pokedex.meta',
+    descriptionKey: 'sections.work.projects.pokedex.description',
+  },
+  {
+    id: 'streamflix',
+    name: 'Streamflix',
+    repoUrl: 'https://github.com/calvin-kamp-dev/streamflix',
+    liveUrl: 'https://github.com/calvin-kamp',
+    featured: false,
+    tags: ['Angular', 'Supabase', 'TypeScript'],
+    coverRows: [{ width: 84 }, { width: 52 }, { width: 64, accent: true }],
+    coverLabelKey: 'sections.work.projects.streamflix.coverLabel',
+    metaKey: 'sections.work.projects.streamflix.meta',
+    descriptionKey: 'sections.work.projects.streamflix.description',
+  },
+]
+
+export const featuredProject = projects.find((project) => project.featured)
+export const secondaryProjects = projects.filter((project) => !project.featured)
